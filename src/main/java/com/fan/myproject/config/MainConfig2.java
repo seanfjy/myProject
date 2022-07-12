@@ -34,16 +34,16 @@ public class MainConfig2 {
     @Bean("person")
     public Person person(){
         System.out.println("给容器中添加Person===");
-        return new Person("张红",22);
+        return new Person("张红",22,null);
     }
     @Bean("bill")
     public Person person01(){
-        return new Person("Bill Gates",66);
+        return new Person("Bill Gates",66,null);
     }
     @Bean("linus")
     @Conditional({LinuxCondition.class})
     public Person person02(){
-        return new Person("Linus",77);
+        return new Person("Linus",77,null);
     }
 
     /**

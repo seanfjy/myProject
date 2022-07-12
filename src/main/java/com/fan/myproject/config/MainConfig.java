@@ -20,6 +20,6 @@ public class MainConfig {
 
     @Bean(value = "person1")
     public Person person01(){
-        return new Person("lisi",20);
+        return new Person("lisi",20,null);
     }
 }
