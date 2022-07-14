@@ -4,8 +4,6 @@ import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PreDestroy;
-
 @Component
 public class Cat implements InitializingBean, DisposableBean {
     public Cat(){
