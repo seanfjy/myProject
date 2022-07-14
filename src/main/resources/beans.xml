@@ -2,6 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!--包扫描，只有标注了@Controller,@Service,@Component,@Repository-->
@@ -12,5 +13,7 @@
         <property name="name" value="zhangSan"/>
         <property name="age" value="18"/>
     </bean>
+    <!--开启基于注解版的切面功能-->
+    <aop:aspectj-autoproxy/>
 
 </beans>
