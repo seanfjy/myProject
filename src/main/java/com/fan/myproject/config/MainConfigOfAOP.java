@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import com.fan.myproject.aop.LogAspects;
 import com.fan.myproject.aop.MathCalculator;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * AOP 指在程序运行期间动态的将某段代码切入到指定方法指定位置进行的编程方式
@@ -23,8 +24,14 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  * 5.将切面类好业务逻辑类（目标方法所在类）都加入到容器中
  * 6（给切面类加个注解@Aspect，告诉spring当前类为切面类
  * 7、给配置类中加@EnableAspectJAutoProxy//开启基于注解的aop模式
+ *
+ *
+ *   流程：
+ *
+ *
  */
 @EnableAspectJAutoProxy//开启基于注解的aop模式
+@EnableTransactionManagement
 @Configuration
 public class MainConfigOfAOP {
     //业务逻辑类加入容器中
