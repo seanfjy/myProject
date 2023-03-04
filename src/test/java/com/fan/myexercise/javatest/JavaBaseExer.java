@@ -4,7 +4,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.ServiceLoader;
 
 import org.junit.jupiter.api.Test;
@@ -153,6 +155,11 @@ public class JavaBaseExer {
             Search next = iterator.next();
             next.searchDoc("hello,world!");
         }
+    }
+    @Test
+    void test8(){
+        List<String> list = new ArrayList<>();
+        list.add("hello");
     }
 
 }
